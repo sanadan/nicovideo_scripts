@@ -4,12 +4,11 @@
 // @description ニコニコ動画のプレイヤーがトップにくるようスクロール
 // @include     http://www.nicovideo.jp/*
 // @version     1.0
-// @grant       allow pasting
+// @grant       none
 // ==/UserScript==
 
 ( function( $ ) {
   var player = $( '#playerAlignmentArea' ) ;
-  alert( player.size() ) ;
   if ( player.size() == 0 )
   { // 要素がない
     // 終わり
