@@ -20,7 +20,8 @@
     if ( player[ 0 ].ext_getStatus() == 'end' )
     {
       clearInterval( id ) ;
-      $('html,body').animate({ scrollTop: $( '#videoInfoHead' ).offset().top - height }, 'fast' ) ;
+//      $('html,body').animate({ scrollTop: $( '#videoInfoHead' ).offset().top - height }, 'fast' ) ;
+      $('html,body').animate({ scrollTop: 0 }, 'fast' ) ;
     }
   }, 1000 ) ;
 } )( jQuery ) ;
