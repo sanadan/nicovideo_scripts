@@ -1,20 +1,21 @@
 // ==UserScript==
-// @name        nv_scroll
-// @namespace   nv_scroll
-// @description ニコニコ動画のプレイヤーがトップにくるようスクロール
+// @name        nvs_open
+// @namespace   nvs_open
+// @description ニコニコ動画を開いたとき、プレイヤーがトップにくるようスクロール
 // @include     http://www.nicovideo.jp/*
 // @version     1.0
 // @grant       none
 // ==/UserScript==
 
 ( function( $ ) {
-  var player = $( '#playerAlignmentArea' ) ;
-  if ( player.size() == 0 )
+  var playerArea = $( '#playerAlignmentArea' ) ;
+  if ( playerArea.size() == 0 )
   { // 要素がない
     // 終わり
     return ;
   }
-  var top = player.offset().top;
+
+  var top = playerArea.offset().top;
   var height = $( '#siteHeader' ).height() ;
   $('html,body').animate({ scrollTop: top - height }, 'fast');
 } )( jQuery ) ;
