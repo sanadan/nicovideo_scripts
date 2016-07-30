@@ -9,7 +9,6 @@
 
 ( function( $ ) {
   var player = $( '#playerAlignmentArea' ) ;
-  alert( player.size() ) ;
   if ( player.size() == 0 )
   { // 要素がない
     // 終わり
