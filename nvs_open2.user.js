@@ -8,12 +8,12 @@
 // ==/UserScript==
 
 (function(){
+  var e = document.getElementById( "siteHeader" ) ;
+  e.innerHTML += '<style>.nvs_floating{bottom:0px;right:0px;position:fixed;z-index:1;}</style><div class="nvs_floating"><button id="nvs_top">top</button><button id="nvs_movie">movie</button></div>' ;
+  document.getElementById( "nvs_top" ).addEventListener( 'click', to_top, false ) ;
+  document.getElementById( "nvs_movie" ).addEventListener( 'click', to_movie, false ) ;
+
   to_movie() ;
-  
-  var body = document.getElementsByTagName( "body" )[ 0 ] ;
-  body.innerHTML += '<style>.floating{bottom:0px;right:0px;position:fixed;z-index:1;}</style><div class="floating"><button id="top">top</button><button id="movie">movie</button></div>' ;
-  document.getElementById( "top" ).addEventListener( 'click', to_top, false ) ;
-  document.getElementById( "movie" ).addEventListener( 'click', to_movie, false ) ;
 })() ;
 
 function to_movie()
