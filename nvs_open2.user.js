@@ -14,6 +14,8 @@
   document.getElementById( "nvs_movie" ).addEventListener( 'click', to_movie, false ) ;
 
   to_movie() ;
+  
+  document.getElementsByClassName( "CommentInput-textarea" )[ 0 ].focus() ;
 })() ;
 
 function to_movie()
